@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+    font-family: var(--font-inter), sans-serif;
+  }
+  
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-playfair), serif;
+  }
+}
+
+@layer components {
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-md border-b border-[#D5BDAF]/20;
+  }
+  
+  .btn-primary {
+    @apply bg-[#4F772D] text-white px-8 py-3 rounded-full text-sm font-medium transition-all hover:bg-[#3d5d23] hover:shadow-lg hover:shadow-[#4F772D]/20 active:scale-95;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#D5BDAF]/30;
+  }
+}
